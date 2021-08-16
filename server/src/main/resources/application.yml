@@ -1,0 +1,6 @@
+server:
+  port: 8000
+
+okta:
+  oauth2:
+    issuer: https://dev-3743387.okta.com/oauth2/default

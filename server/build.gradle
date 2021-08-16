@@ -1,0 +1,35 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id "io.freefair.lombok" version "6.1.0"
+    id 'checkstyle'
+    id 'java'
+}
+
+group = 'oidc'
+version = '0.0.1'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    implementation 'com.okta.spring:okta-spring-boot-starter:2.1.0'
+
+    implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:11.1.0'
+    implementation 'com.graphql-java-kickstart:graphiql-spring-boot-starter:11.1.0'
+    implementation 'com.graphql-java-kickstart:voyager-spring-boot-starter:11.1.0'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'com.graphql-java-kickstart:graphql-spring-boot-starter-test:11.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
