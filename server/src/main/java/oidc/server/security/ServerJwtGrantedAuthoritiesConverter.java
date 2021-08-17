@@ -7,11 +7,15 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 
-// Allows the server to add custom authorities to the user's authorization context.
-// Useful if the default behavior that converts the JWT's claim/groups needs to be extended.
+/**
+ * Allows the server to add custom authorities to the user's authorization context.
+ * Useful if the default behavior that converts the JWT's claim/groups needs to be extended.
+ */
 public class ServerJwtGrantedAuthoritiesConverter implements
     Converter<Jwt, Collection<GrantedAuthority>> {
 
+  // This is Spring Securities default JWT based converter, which takes the claims from the token
+  // and converts them to a SimpleGrantedAuthority.
   static final JwtGrantedAuthoritiesConverter DEFAULT_CONVERTER =
       new JwtGrantedAuthoritiesConverter();
 

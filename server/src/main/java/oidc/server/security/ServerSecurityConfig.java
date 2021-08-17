@@ -48,6 +48,14 @@ public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
     return source;
   }
 
+  /**
+   * This configuration disables the default Okta Spring Boot Starter library behavior, which
+   * converts the 'groups' claim in the JWT to the user's set of Authorities. This is an unnecessary
+   * feature if Okta's built-in Groups based authorization is needed, and can be removed if so.
+   *
+   * @return A converter that add authorities customized by the server application to a user's
+   * authentication principle.
+   */
   private JwtAuthenticationConverter jwtAuthenticationConverter() {
     ServerJwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter =
         new ServerJwtGrantedAuthoritiesConverter();
