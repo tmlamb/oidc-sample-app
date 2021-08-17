@@ -12,5 +12,3 @@ This sample application demonstrates how easy it is to setup a secure client/ser
 - Integrates with the graphql-spring-boot-starter library to expose an example GraphQL schema. This setup demonstrates how to integrate the GraphQL interface with Spring Security and the application's OAuth flow in order to authenticate and authorize access globally and at the fine-grained query/mutation level.
 ### Oauth 2.0 authorization server (external dependency) 
 See [https://developer.okta.com/](https://developer.okta.com/)
-
-### Configuring Spring Security's CORS filter to allow localhost conections from the client host.
