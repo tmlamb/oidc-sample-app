@@ -7,7 +7,7 @@ REACT_APP_ISSUER=https://dev-123456.okta.com/oauth2/default
 REACT_APP_CLIENT_ID=0oe1faz3...
 ```
 
-To run locally on http://localhost:3000 execute the `npm start` task:
+To run locally on http://localhost:3000 execute the `npm start` script:
 
 ```shell
 npm start
