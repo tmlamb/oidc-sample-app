@@ -1,6 +1,6 @@
 This is an OAuth 2.0 Resource Server written in Java.
 
-It uses Spring Boot, so to run locally simply execute the `bootRun` task:
+It uses Spring Boot, so to run locally execute the `bootRun` task:
 
 ```shell
 ./gradlew bootRun
