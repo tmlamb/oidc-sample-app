@@ -2,7 +2,7 @@ Have you ever dreamt of having an incredibly secure, yet also simple way to hand
 
 ![OIDC System](https://user-images.githubusercontent.com/21133122/129646755-48da3801-7ec6-462e-91dc-772fc55dadfa.png)
 
-This sample application demonstrates how easy it is to setup a React frontend and Spring Boot backend to act as a public client and resource server in an OAuth 2.0 Open ID Connect secured authorization flow, with a GraphQL API for good measure! It takes advantage of powerful, simple tools provided by Okta and the Open Source community.
+This sample application demonstrates how easy it is to setup a React frontend and Spring Boot backend to act as a public client and resource server in an OAuth 2.0 Open ID Connect secured auth flow, with a GraphQL API for good measure! It takes advantage of powerful, simple tools provided by Okta and the Open Source community.
 
 ### Open ID Connect public client with PKCE
 - See [client](/client)
