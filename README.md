@@ -1,6 +1,6 @@
 # Open ID Connect (OIDC) Sample Application
 
-This sample application demonstrates how easy it is to setup a React frontend and Spring Boot backend to act as a public client and resource server in an OAuth 2.0 OIDC secured flow, with a GraphQL API for good measure! It takes advantage of powerful, simple tools provided by Okta and the Open Source community.
+Sample application for a React frontend and Spring Boot backend to act as a public client and resource server in an OAuth 2.0 OIDC secured flow, with a GraphQL API for good measure!
 
 ### Open ID Connect public client with PKCE
 - See [client](/client)
