@@ -3,7 +3,7 @@ import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
 import { Security, SecureRoute, LoginCallback } from '@okta/okta-react';
 import config from './config';
 import './App.css';
-import Home from './Home';
+import HeaderNav from './HeaderNav';
 import Profile from './Profile';
 import Messages from './Messages';
 import Books from './Books';
@@ -14,6 +14,7 @@ import {
   createHttpLink
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
+import Grid from '@mui/material/Grid';
 
 const oktaAuth = new OktaAuth(config.oidc);
 
@@ -47,13 +48,20 @@ function App() {
   return (
     <Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri}>
       <ApolloProvider client={client}>
-        <Switch>
-          <Route path="/" exact={true} component={Home}/>
-          <Route path="/login/callback" component={LoginCallback}/>
-          <SecureRoute path="/messages" component={Messages}/>
-          <SecureRoute path="/profile" component={Profile}/>
-          <SecureRoute path="/books" component={Books}/>
-        </Switch>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <HeaderNav/>
+          </Grid>
+          <Grid item xs={12}>
+            <Switch>
+              {/* <Route path="/" exact={true} component={Home}/> */}
+              <Route path="/login/callback" component={LoginCallback}/>
+              <SecureRoute path="/messages" component={Messages}/>
+              <SecureRoute path="/profile" component={Profile}/>
+              <SecureRoute path="/books" component={Books}/>
+            </Switch>
+          </Grid>
+        </Grid>
       </ApolloProvider>
     </Security>
   );
